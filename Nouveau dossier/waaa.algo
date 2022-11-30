@@ -1,0 +1,28 @@
+FUNCTION produitscalire(a,b:Array_OF INTEGER[]) : INTEGER
+VAR
+     i: INTEGER
+     sum:INTEGER
+BEGIN
+     for i FROM 1 TO a.length STEP 1 DO 
+     SUM= sum+a[i]*b[i]
+     END_FOR
+     RETURN sum
+END
+ALGORITHM CALC
+VAR
+     T1 : ARRAY_OF INTEGER[3] := [2,4,5]
+     T2 : Array_OF INTEGER[3] :=[2,4,5]
+     test: INTEGER :=0;
+BEGIN
+     if (T1.length <> T2.length)THEN
+     write("error")
+     ELSE 
+     test := produitscalire(T1,T2)
+     if (test=0)THEN
+     write ("orth")
+     ELSE 
+     write ("non orth")
+     
+     
+     END_IF
+END

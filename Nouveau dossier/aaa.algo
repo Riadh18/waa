@@ -1,0 +1,25 @@
+PROCEDURE Dot product(a,b:ARRAY_OF INTEGER[],VAR c : INTEGER)
+VAR
+    I:INTEGER
+BEGIN
+    FOR i FROM 1 TO a.length STEP 1  DO
+        c= c+a[i]*b[i]
+    END_FOR
+END
+ALGORITHM pairs of  vectors
+VAR
+   T1: ARRAY_OF INTEGER[3] :=[2,4,5];
+   T2: ARRAY_OF INTEGER[3] :=[2,4,5];
+   refsum: INTEGER:=0;
+
+BEGIN
+   if (T1.length <> T2.length) THEN
+   write("ERROR")
+   ELSE
+    Dot product(T1,T2,refsum)
+    if(refsum=0)THEN
+    write("ORTH");
+    ELSE
+    write("non orth");
+   END_IF
+END
